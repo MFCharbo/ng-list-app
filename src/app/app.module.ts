@@ -8,13 +8,17 @@ import { CallbackComponent } from './callback/callback.component';
 import { ListsComponent } from './lists/lists.component';
 
 import { HttpClientModule } from "@angular/common/http";
+import { ProfileComponent } from './profile/profile.component';
+import { ElementsComponent } from './elements/elements.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CallbackComponent,
-    ListsComponent
+    ListsComponent,
+    ProfileComponent,
+    ElementsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,25 @@
-<p>lists works!</p>
+<pre *ngIf="responseJson">
+    <pre>
+    <h1 class="hdr">Your Lists</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let list of responseJson">
+                <th scope="row">{{list.id}}</th>
+                <td><a [routerLink]="['/lists', list.id]" (onclick)="clickedList(list.id)" >{{list.title}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+</pre>
+</pre>
+
+
+<!-- 
+<pre *ngIf="responseJson">
+<code>{{ responseJson | json }}</code>
+</pre> -->
